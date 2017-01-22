@@ -6,11 +6,9 @@ let db = {
 };
 
 mongoose.Promise = global.Promise;
-mongoose.connect( db.mLab, () => {
+mongoose.connect( db.localhost, () => {
 	console.log('Connected to mongodb');
 });
 
 
-module.exports = {
-	mongoose
-};
+module.exports = {mongoose};
