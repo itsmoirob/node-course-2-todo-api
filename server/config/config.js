@@ -1,5 +1,4 @@
 var env = process.env.NODE_ENV || 'development' ;
-console.log('env*****', env);
 
 if(env === 'production') {
 	process.env.MONGODB_URI = 'mongodb://dev:d382ec9aw47PZUPL@ds117109.mlab.com:17109/node-2-todo-api';
