@@ -12,7 +12,7 @@ const users = [{
 	email: 'winning@test.com',
 	password: 'aPassword1',
 	tokens: [{
-		token: jwt.sign({_id: userOneID, access: 'auth'}, 'abc123').toString(),
+		token: jwt.sign({_id: userOneID, access: 'auth'}, process.env.JWT_SECRET).toString(),
 		access: 'auth'
 	}]
 }, {
@@ -20,7 +20,7 @@ const users = [{
 	email: 'loser@test.com',
 	password: 'aPassword2',
 		tokens: [{
-		token: jwt.sign({_id: userTwoID, access: 'auth'}, 'abc123').toString(),
+		token: jwt.sign({_id: userTwoID, access: 'auth'}, process.env.JWT_SECRET).toString(),
 		access: 'auth'
 	}]
 }];
